@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Q2</title>
+	
+    <link rel="stylesheet" href="Q2.css">
+	
+    <script src="Q2js-data.js"></script>
+	
+    <script src="Q2js-functions.js"></script>
+	
+</head>
+<body>
+    <header>
+        <h2>Travels</h2>
+    </header>
+
+    <div class="flex-container justify">
+        <script>
+            // Loop the size countries, where it will be 4 times 
+            for(var i=0; i<countries.length; i++){
+                var c = countries[i];
+				
+                // call the function with data to display
+                outputCountryBox(c.name, c.continent, c.cities, c.photos);
+            }
+        </script>
+    </div>
+</body>
+</html>
