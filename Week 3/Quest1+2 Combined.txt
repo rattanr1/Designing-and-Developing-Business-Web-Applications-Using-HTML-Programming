@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .order {
+            margin-left: 25px;
+            margin-right: 25px;
+            background-color: #7E8993;
+        }
+
+        .order h3 {
+            text-align: center;
+            color: white;
+            padding: 5px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 10px 70px;
+        }
+
+        th {
+            color: #4b4c4e;
+        }
+
+        .animated-progress {
+            width: 150px;
+            height: 10px;
+            border-radius: 30px;
+            margin: 10px 0px;
+            border: 1px solid rgb(0, 115, 255);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .animated-progress span {
+            height: 100%;
+            display: block;
+            width: 0;
+            color: rgb(255, 251, 251);
+            position: absolute;
+            text-align: end;
+            padding-right: 5px;
+        }
+
+        .progress-blue span {
+            background-color: rgb(0, 115, 255);
+        }
+
+        .shipped {
+            background-color: #9ACD32;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+        }
+
+        .processing {
+            background-color: #FF4500;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+        }
+
+        .pending {
+            background-color: rgb(0, 191, 255);
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Data</a>
+    </nav>
+    <div class="order">
+        <h3>Orders</h3>
+    </div>
+    <div class="tab">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Country</th>
+                <th>Progress</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>Sep 12, 2017</td>
+                <td>Jean Rousseau</td>
+                <td>France</td>
+                <td>
+                    <div class="animated-progress progress-blue">
+                        <span data-progress="100"></span>
+                    </div>
+                </td>
+                <td><button class="shipped">Shipped</button></td>
+            </tr>
+            <tr>
+                <td>144</td>
+                <td>Sep 20, 2017</td>
+                <td>Georg Hegel</td>
+                <td>Germany</td>
+                <td>
+                    <div class="animated-progress progress-blue">
+                        <span data-progress="100"></span>
+                    </div>
+                </td>
+                <td><button class="shipped">Shipped</button></td>
+            </tr>
+            <tr>
+                <td>149</td>
+                <td>Oct 3, 2017</td>
+                <td>John Locke</td>
+                <td>England</td>
+                <td>
+                    <div class="animated-progress progress-blue">
+                        <span data-progress="60"></span>
+                    </div>
+                </td>
+                <td><button class="processing">Processing</button></td>
+            </tr>
+            <tr>
+                <td>162</td>
+                <td>Oct 8, 2017</td>
+                <td>Thomas Hobbes</td>
+                <td>England</td>
+                <td>
+                    <div class="animated-progress progress-blue">
+                        <span data-progress="30"></span>
+                    </div>
+                </td>
+                <td><button class="pending">Pending</button></td>
+            </tr>
+            <tr>
+                <td>177</td>
+                <td>Oct 10, 2017</td>
+                <td>Johann Fichte</td>
+                <td>Germany</td>
+                <td>
+                    <div class="animated-progress progress-blue">
+                        <span data-progress="30"></span>
+                    </div>
+                </td>
+                <td><button class="pending">Pending</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(".animated-progress span").each(function () {
+            $(this).animate({
+                    width: $(this).attr("data-progress") + "%",
+                },
+                1000
+            );
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+<html>
+
+<head>
+    <style>
+        .window {
+            border: 1px solid black;
+        }
+
+        .head {
+            background-color: rgb(46, 42, 60);
+            color: white;
+            padding: 10px
+        }
+
+        .form {
+            padding-left: 70px;
+            padding-top: 10px;
+        }
+
+        button {
+            height: 44px;
+            width: 105px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+        }
+        button:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--The whole window div-->
+    <div class="window">
+        <!--heading div for revise-->
+        <div class="head">Revise</div>
+        <!--form div-->
+        <div class="form">
+            <form action="">
+                <b>Customer</b><br>
+                <input type="text" placeholder="Enter name"><br><br>
+                <b>Country</b><br>
+
+                <select name="list" id="country">
+                    <option value="" disabled selected>Choose a country</option> <!--Choose a country cannot be selected-->
+                    <option value="Eng">England</option>
+                    <option value="Fre">French</option>
+                    <option value="Ger">Germany</option>
+                </select><br><br>
+
+                <b>Status</b><br>
+                <input type="radio" id="pending" name="status" value="">
+                <label for="pedning">Pending</label>
+                <input type="radio" id="processing" name="status" value="">
+                <label for="processing">processing</label>
+                <input type="radio" id="shipped" name="status" value="">
+                <label for="shipped">Shipped</label><br><br>
+
+                <b>Order Date</b><br>
+                <input type="date" id="orderDate" name="Date"><br><br>
+
+                <div class="btn_grp">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear form</button> <!-- type reset to clear the form-->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
