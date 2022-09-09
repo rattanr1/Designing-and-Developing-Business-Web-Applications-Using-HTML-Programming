@@ -1,0 +1,49 @@
+<html>
+  <head>
+      <style type="text/css">
+      div {
+        font-weight: bold;
+        font-size:  20px;
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+      }
+      section {
+        margin-bottom: 15px;
+      }
+      </style>
+  </head>
+  <body>
+    <div>Form</div>
+    <form action="http://www.randyconnolly.com/tests/process.php" method="POST">
+      <section>
+        <label for="fName">Name</label>
+        <input name="fName" type="text" placeholder="Name" />
+      </section>
+      <section>
+        <label for="fState">State</label>
+        <select name="fState">
+            <option value="">State</option>
+            <option value="AB">AB</option>
+            <option value="BC">BC</option>
+            <option value="SK">SK</option>
+        </select>
+      </section>
+      <section>
+        <label for="fStatus">Status</label>
+        <input type="radio" name="fStatus" value="Out of State" checked /> Out of State
+        <input type="radio" name="fStatus" value="In State" /> In State
+      </section>
+      <section>
+        <label for="fDocuments">Documents:</label>
+        <input type="checkbox" name="fDocuments" value="Visa" checked /> Visa <br />
+        <input type="checkbox" name="fDocuments" value="Passport" /> Passport <br />
+        <input type="checkbox" name="fDocuments" value="Insurance" /> Insurance
+      </section>
+      <section>
+        <input type="submit" value="Submit" />
+      </section>
+    </form>
+  </body>
+</html>
