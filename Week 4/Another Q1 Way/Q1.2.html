@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<style>
+th{
+background-color:orange;
+}
+
+th,td{
+border: 1px solid;
+text-align:center;
+}
+</style>
+
+<head>
+</head>
+<body>
+<table style="border: 1px solid;border-collapse:collapse; width: 100%;">
+    <tr>
+        <th colspan="2"style="width: 40%;">Product</th>
+        <th style="  width: 20%;">Quantity</th>
+        <th style="  width: 20%;">Price</th>
+        <th style="  width: 20%;">Amount</th>
+	</tr>
+	<tr>
+        <td id="imgTd0" style="background-color:white; width: 20%;"><img id="img0"/></td>
+		<td id="desTd0" style="width: 20%;"></td>
+        <td id="qtyTd0" style="width: 20%;"></td>
+        <td id="priceTd0" style="width: 20%;"></td>
+        <td id="amtTd0" style="width: 20%;"></td>
+	</tr>
+	
+	<tr>
+        <td id="imgTd1" style="background-color:white; width: 20%;"><img id="img1"/></td>
+		<td id="desTd1" style="width: 20%;"></td>
+        <td id="qtyTd1" style="width: 20%;"></td>
+        <td id="priceTd1" style=" width: 20%;"></td>
+        <td id="amtTd1" style=" width: 20%;"></td>
+	</tr>
+	<tr>
+        <td id="imgTd2" style=" background-color:white; width: 20%;"><img id="img2"/></td>
+		<td id="desTd2" style="width: 20%;"></td>
+        <td id="qtyTd2" style="width: 20%;"></td>
+        <td id="priceTd2" style="width: 20%;"></td>
+        <td id="amtTd2" style="width: 20%;"></td>
+	</tr>
+</body>
+<script>
+var images = ['106020.jpg','116010.jpg','120010.jpg']
+
+var descriptions = ['Biscuit','Chocolate','Icecream'];
+var quantities = [3,1,2];
+var prices = [80,125,75];
+
+var count = images.length;
+
+for(var i=0; i<count; i++){
+document.getElementById('img'+i).src= images[i];
+document.getElementById('desTd'+i).innerHTML= descriptions[i];
+document.getElementById('qtyTd'+i).innerHTML= quantities[i];
+document.getElementById('priceTd'+i).innerHTML= '$'+prices[i];
+document.getElementById('amtTd'+i).innerHTML= '$'+quantities[i]*prices[i];
+
+}
+</script>
+</html>

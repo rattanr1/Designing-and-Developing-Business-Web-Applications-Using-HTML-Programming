@@ -1,0 +1,25 @@
+.table-styling{
+border-collapse:collapse;
+text-align: center;
+width:700px;
+height:700px;
+font-size: 20px;
+margin-left:400px;
+margin-top:30px;
+background-color:snow;
+}
+.table-fr{
+background-color:darkorange;
+color:white;
+height:55px;
+}
+.table-header{
+padding-top:20px;
+}
+.image-styling{
+width:150px;
+height:150px;
+margin-bottom:5px;
+margin-top:5px;
+
+}
